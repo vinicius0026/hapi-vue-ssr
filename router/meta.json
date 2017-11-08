@@ -1,0 +1,12 @@
+{
+  "/": {
+    "title": "Vue.js SSR with Hapi.js as Server",
+    "description": "SSR Vue.js using Hapi.js",
+    "keywords": "hapi,vue,ssr"
+  },
+  "/about": {
+    "title": "About the project",
+    "description": "About description",
+    "keywords": "hapi,vue,ssr"
+  }
+}
