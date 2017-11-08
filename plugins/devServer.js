@@ -64,33 +64,17 @@ function registerMiddlewares (server) {
 
   server.ext({
     type: 'onRequest',
-    method: async function (request, h) {
-      const { req, res } = request.raw
-      await new Promise((resolve, reject) => {
-        devMiddleware(req, res, err => {
-          if (err) {
-            throw err
-          }
-
-          hotMiddleware(req, res, err => {
-            if (err) {
-              throw err
-            }
-
-            resolve()
-          })
-        })
-      })
-      return h.continue
-    }
+    method: [
+      middlewareHandlerFactory(devMiddleware),
+      middlewareHandlerFactory(hotMiddleware)
+    ]
   })
 }
 
-function middlewareHandlerFactory (middleware, middlewareName) {
+function middlewareHandlerFactory (middleware) {
   return async function (request, h) {
     const { req, res } = request.raw
     await new Promise((resolve, reject) => {
-      console.log('calling middleware', middlewareName)
       middleware(req, res, err => {
         if (err) {
           throw err
