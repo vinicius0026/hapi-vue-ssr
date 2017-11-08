@@ -1,9 +1,6 @@
 const Path = require('path')
 
-const isProd = process.env.NODE_ENV === 'prod'
-
-const prodPlugins = ['inert', './appServer', './staticServer', './renderer']
-const devPlugins = ['./devServer', './eventBus'].concat(prodPlugins)
+const Config = require('./config')
 
 module.exports = {
   server: {
@@ -16,6 +13,6 @@ module.exports = {
     }
   },
   register: {
-    plugins: isProd ? prodPlugins : devPlugins
+    plugins: Config.get('/plugins')
   }
 }
