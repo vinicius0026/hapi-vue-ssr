@@ -51,7 +51,6 @@ async function provision () {
 
       try {
         const html = await renderer.renderToString(context)
-        Fs.writeFileSync('./output.html', html)
         return h.response(html).header('Content-Type', 'text/html')
       } catch (err) {
         throw err
