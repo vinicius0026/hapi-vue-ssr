@@ -14,7 +14,7 @@ function registerRoutes (server) {
     path: '/public/{param*}',
     handler: {
       directory: {
-        path: Path.resolve(__dirname, '../public'),
+        path: Path.resolve(__dirname, '../../public'),
         redirectToSlash: true,
         index: true
       }

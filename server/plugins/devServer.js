@@ -4,8 +4,8 @@ const HotMiddleware = require('webpack-hot-middleware')
 const MFS = require('memory-fs')
 const Path = require('path')
 
-const clientConfig = require('../build/webpack.client.config')
-const serverConfig = require('../build/webpack.server.config')
+const clientConfig = require('../../build/webpack.client.config')
+const serverConfig = require('../../build/webpack.server.config')
 
 // modify client config to work with hot middleware
 clientConfig.entry.app = ['webpack-hot-middleware/client', clientConfig.entry.app]

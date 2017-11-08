@@ -1,4 +1,4 @@
-const createRenderer = require('../build/createRenderer')
+const createRenderer = require('../../build/createRenderer')
 const isProd = process.env.NODE_ENV === 'prod'
 
 module.exports = {
@@ -6,8 +6,8 @@ module.exports = {
 
   register: (server, options) => {
     if (isProd) {
-      const bundle = require('../public/vue-ssr-server-bundle.json')
-      const clientManifest = require('../public/vue-ssr-client-manifest.json')
+      const bundle = require('../../public/vue-ssr-server-bundle.json')
+      const clientManifest = require('../../public/vue-ssr-client-manifest.json')
 
       server.app.renderer = createRenderer(bundle, { clientManifest })
       return
