@@ -3,7 +3,7 @@ const LRU = require('lru-cache')
 const Path = require('path')
 const { createBundleRenderer } = require('vue-server-renderer')
 
-const template = Fs.readFileSync(resolve('../assets/index.template.html'), 'utf-8')
+const template = Fs.readFileSync(resolve('../app/index.template.html'), 'utf-8')
 
 module.exports = function (bundle, options) {
   return createBundleRenderer(bundle, {
