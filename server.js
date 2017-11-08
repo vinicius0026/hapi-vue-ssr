@@ -1,37 +1,19 @@
-const Hapi = require('hapi')
-const Inert = require('inert')
+const Glue = require('glue')
 
-const AppServer = require('./plugins/appServer')
-const DevServer = require('./plugins/devServer')
-const StaticServer = require('./plugins/staticServer')
-const Renderer = require('./plugins/renderer')
-const EventBus = require('./plugins/eventBus')
+const manifest = require('./manifest')
+const composeOptions = require('./composeOptions')
 
-const isProd = process.env.NODE_ENV === 'prod'
-
-const server = new Hapi.Server({
-  port: process.env.PORT || 8080,
-  host: 'localhost',
-  routes: {
-    files: {
-      relativeTo: __dirname
-    }
+const startServer = async function () {
+  try {
+    const server = await Glue.compose(manifest, composeOptions)
+    await server.start()
+    console.log(
+      `${new Date()} - Server running at ${server.info.uri} in ${process.env.NODE_ENV} env`
+    )
+  } catch (err) {
+    console.error(err, err.stack)
+    process.exit(1)
   }
-})
-
-provision()
-
-async function provision () {
-  const prodPlugins = [Inert, AppServer, StaticServer, Renderer]
-  const devPlugins = [DevServer, EventBus]
-
-  const plugins = isProd ? prodPlugins : devPlugins.concat(prodPlugins)
-
-  await server.register(plugins)
-
-  await server.start()
-
-  console.log(
-    `${new Date()} - Server running at ${server.info.uri} in ${process.env.NODE_ENV} env`
-  )
 }
+
+startServer()

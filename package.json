@@ -45,6 +45,7 @@
     "cross-env": "^5.1.1",
     "es6-promise": "^4.1.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "glue": "^5.0.0",
     "hapi": "^17.0.1",
     "inert": "^5.0.1",
     "lru-cache": "^4.1.1",
