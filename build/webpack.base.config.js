@@ -31,15 +31,15 @@ module.exports = {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
       'app': resolve('../app'),
-      'components': resolve('../components'),
-      'examples': resolve('../pages/examples'),
-      'layouts': resolve('../layouts'),
-      'mixins': resolve('../mixins'),
-      'pages': resolve('../pages'),
+      'components': resolve('../app/components'),
+      'examples': resolve('../app/pages/examples'),
+      'layouts': resolve('../app/layouts'),
+      'mixins': resolve('../app/mixins'),
+      'pages': resolve('../app/pages'),
       'public': resolve('../public'),
-      'router': resolve('../router'),
+      'router': resolve('../app/router'),
       'static': resolve('../static'),
-      'store': resolve('../store'),
+      'store': resolve('../app/store'),
       'vue$': 'vue/dist/vue.common.js'
     }
   },
