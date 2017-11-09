@@ -1,17 +1,24 @@
 <template>
-  <div>
-    <h1>Home</h1>
-    <router-link to="/about">go to about</router-link>
-    <Hello></Hello>
-  </div>
+  <v-layout column
+            justify-center
+            align-center>
+    <v-flex xs12 sm8 md6>
+      <v-card>
+        <v-card-title primary-title>
+          <h5>Vue.js SSR with Hapi.js server</h5>
+        </v-card-title>
+        <Features></Features>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-import Hello from '../components/Hello'
+import Features from '../components/Features'
 
 export default {
   components: {
-    Hello
+    Features
   }
 }
 </script>
