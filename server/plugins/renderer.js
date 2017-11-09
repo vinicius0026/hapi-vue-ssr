@@ -1,5 +1,5 @@
 const createRenderer = require('../createRenderer')
-const isProd = process.env.NODE_ENV === 'prod'
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   name: 'Renderer',

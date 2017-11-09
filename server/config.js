@@ -13,7 +13,7 @@ const config = {
   $meta: 'Environment based config',
   plugins: {
     $filter: 'env',
-    dev: ['./devServer', './eventBus', 'inert', './appServer', './staticServer', './renderer'],
+    development: ['./devServer', './eventBus', 'inert', './appServer', './staticServer', './renderer'],
     $default: ['inert', './appServer', './staticServer', './renderer']
   }
 }

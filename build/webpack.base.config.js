@@ -4,7 +4,7 @@ const VueConfig = require('./vue-loader.config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
-const isProd = process.env.NODE_ENV === 'prod'
+const isProd = process.env.NODE_ENV === 'production'
 const resolve = file => Path.resolve(__dirname, file)
 
 const prodPlugins = [
