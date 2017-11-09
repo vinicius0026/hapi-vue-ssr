@@ -10,6 +10,6 @@ Further documentation can be found at
 [Vuetify SSR Guide](https://vuetifyjs.com/guides/server-side-rendering) or
 at [Vue.js SSR Guide](https://ssr.vuejs.org/en/)
 
-# Licence
+# License
 
 MIT
