@@ -1,16 +1,10 @@
 <template>
-  <v-card>
-    <v-card-title><h6>Features</h6></v-card-title>
-    <v-list>
-      <v-list-tile v-for="(feature, i) in features" :key="i">
-        <v-list-tile-content>
-          <v-list-tile-title>
-            {{ feature }}
-          </v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </v-list>
-  </v-card>
+  <div>
+    <h6>Features</h6>
+    <ul>
+      <li v-for="(feature, i) in features" :key="i">{{ feature }}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
