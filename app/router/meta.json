@@ -8,5 +8,10 @@
     "title": "About the project",
     "description": "About description",
     "keywords": "hapi,vue,ssr"
+  },
+  "/products": {
+    "title": "Products",
+    "description": "List of products",
+    "keywords": "products,hapi,vue,ssr"
   }
 }
