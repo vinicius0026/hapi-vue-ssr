@@ -1,32 +1,24 @@
 <template>
-  <div>
-    <h5>Products</h5>
-    <Product v-for="(product, i) in products"
+  <b-container>
+    <b-row>
+      <b-col>
+        <h5>Products</h5>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col v-for="(product, i) in products"
              :key="i"
-             :name="product.name"
-             :price="product.price"
-             :image="product.image">
-    </Product>
-  </div>
-  <!-- <v-layout column wrap>
-    <v-flex v-for="(product, i) in products"
-            :key="i"
-            xs12
-            sm6
-            md4
-            lg3>
-      <v-card>
-        <v-card-media :src="product.image" height="200px">
-        </v-card-media>
-        <v-card-title primary-title>
-          {{ product.name }}
-        </v-card-title>
-        <v-card-text>
-          {{ product.price }}
-        </v-card-text>
-      </v-card>
-    </v-flex>
-  </v-layout> -->
+             cols="12"
+             sm="6"
+             md="4"
+             lg="3">
+        <Product :name="product.name"
+                 :price="product.price"
+                 :image="product.image">
+        </Product>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>

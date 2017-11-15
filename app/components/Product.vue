@@ -2,7 +2,6 @@
   <b-card :title="name"
           :img-src="image"
           :img-alt="name"
-          style="max-width: 20rem;"
           class="mb-2">
     <p class="card-text">{{ price }}</p>
   </b-card>
