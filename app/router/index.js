@@ -24,6 +24,7 @@ export function createRouter () {
       routes: [
         route('/', 'Home'),
         route('/about', 'About'),
+        route('/products', 'Products'),
         // Global redirect for 404
         { path: '*', redirect: '/' }
       ]

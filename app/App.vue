@@ -97,6 +97,7 @@ export default {
       fixed: false,
       items: [
         { icon: 'apps', title: 'Home', to: '/' },
+        { icon: 'shopping_basket', title: 'Products', to: '/products' },
         { icon: 'bubble_chart', title: 'About', to: '/about' }
       ],
       miniVariant: false,
