@@ -18,7 +18,7 @@ If you are here, you probably know the drill:
 - Run `npm install`
 - Run `npm run dev`
 
-Just make sure you are using node > 8, since Hapi.js v17 only supports the most
+Just make sure you are using node >= 8.9, since Hapi.js v17 only supports the most
 recent node releases.
 
 # License
