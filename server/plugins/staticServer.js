@@ -1,23 +1,23 @@
-const Path = require('path')
+const Path = require("path");
 
 module.exports = {
-  name: 'StaticServer',
+  name: "StaticServer",
 
   register: (server, options) => {
-    server.dependency('inert', registerRoutes)
+    server.dependency("@hapi/inert", registerRoutes);
   }
-}
+};
 
-function registerRoutes (server) {
+function registerRoutes(server) {
   server.route({
-    method: 'GET',
-    path: '/public/{param*}',
+    method: "GET",
+    path: "/public/{param*}",
     handler: {
       directory: {
-        path: Path.resolve(__dirname, '../../public'),
+        path: Path.resolve(__dirname, "../../public"),
         redirectToSlash: true,
         index: true
       }
     }
-  })
+  });
 }
