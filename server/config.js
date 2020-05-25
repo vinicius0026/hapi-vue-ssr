@@ -1,23 +1,30 @@
-const Confidence = require('confidence')
-const Dotenv = require('dotenv')
+const Confidence = require("confidence");
+const Dotenv = require("dotenv");
 
-Dotenv.config()
+Dotenv.config();
 
-const internals = {}
+const internals = {};
 
 const criteria = {
-  env: process.env.NODE_ENV
-}
+  env: process.env.NODE_ENV,
+};
 
 const config = {
-  $meta: 'Environment based config',
+  $meta: "Environment based config",
   plugins: {
-    $filter: 'env',
-    development: ['./devServer', './eventBus', 'inert', './appServer', './staticServer', './renderer'],
-    $default: ['inert', './appServer', './staticServer', './renderer']
-  }
-}
+    $filter: "env",
+    development: [
+      "./devServer",
+      "./eventBus",
+      "@hapi/inert",
+      "./appServer",
+      "./staticServer",
+      "./renderer",
+    ],
+    $default: ["@hapi/inert", "./appServer", "./staticServer", "./renderer"],
+  },
+};
 
-internals.store = new Confidence.Store(config)
+internals.store = new Confidence.Store(config);
 
-exports.get = key => internals.store.get(key, criteria)
+exports.get = (key) => internals.store.get(key, criteria);

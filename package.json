@@ -42,6 +42,9 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
+    "@hapi/glue": "^7.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^1.0.2",
@@ -50,9 +53,6 @@
     "dotenv": "^4.0.0",
     "es6-promise": "^4.1.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "glue": "^5.0.0",
-    "hapi": "^17.0.1",
-    "inert": "^5.0.1",
     "lru-cache": "^4.1.1",
     "vue": "^2.5.3",
     "vue-router": "^3.0.1",
