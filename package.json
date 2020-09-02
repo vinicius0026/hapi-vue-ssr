@@ -47,7 +47,7 @@
     "@hapi/inert": "^6.0.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
-    "bootstrap-vue": "^1.0.2",
+    "bootstrap-vue": "^2.0.0",
     "confidence": "^3.0.2",
     "cross-env": "^5.1.1",
     "dotenv": "^4.0.0",
